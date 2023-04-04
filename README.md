@@ -1,4 +1,4 @@
-## Deployemnt
+## Deployment
 * Copy `.env.dist` to `.env`
 * Set your environment with `.env`
 * Put db dumps to `mysql/dumps`

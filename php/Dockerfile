@@ -21,7 +21,8 @@ ADD php/dev/config/* /usr/local/etc/php/conf.d/
 RUN docker-php-source extract \
     && apt-get install -y libxml2-dev libxslt1-dev \
     && apt-get install -y libzip-dev zip unzip \
-    && docker-php-ext-install zip
+    && docker-php-ext-install zip \
+    && docker-php-ext-install pdo pdo_mysql
 
 ## Install Composer
 COPY --from=composer_image /usr/bin/composer /usr/local/bin/composer
